@@ -1,39 +1,39 @@
 import React from 'react';
 import { Brain, Gamepad2, Sparkles, Zap } from 'lucide-react';
-import { 
-  Routes, 
-  Route, 
-  NavLink, 
-  Navigate, 
-  useNavigate, 
-  useLocation ,
+import {
+  Routes,
+  Route,
+  NavLink,
+  Navigate,
+  useNavigate,
+  useLocation,
   BrowserRouter
 } from "react-router-dom";
 
 
 function App() {
 
-  return(
-        <BrowserRouter basename="/GameX">
+  return (
+    <BrowserRouter basename="/GameX">
 
 
-     <Routes  >
-          <Route path="/" element={<MyApp />} />
-        </Routes>
+      <Routes  >
+        <Route path="/" element={<MyApp />} />
+      </Routes>
 
-        </BrowserRouter>
+    </BrowserRouter>
 
   );
-  
+
 }
 
 
 function MyApp() {
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-pink-900">
-      
+
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-pink-600/20 animate-pulse"></div>
-      
+
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-yellow-400 to-red-500 rounded-full opacity-20 animate-float-slow"></div>
         <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-green-400 to-blue-500 rounded-full opacity-25 animate-float-medium"></div>
@@ -54,7 +54,7 @@ function MyApp() {
           </h1>
           <div className="flex items-center justify-center gap-2 text-lg sm:text-xl text-white/80 font-medium">
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
-            <span>Ultimate Quiz Experience</span>
+            <span>Gamified Online Examination & Learning System</span>
             <Zap className="w-6 h-6 text-blue-400 animate-pulse" />
           </div>
         </div>
