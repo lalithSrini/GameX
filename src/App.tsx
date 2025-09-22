@@ -1,7 +1,34 @@
 import React from 'react';
 import { Brain, Gamepad2, Sparkles, Zap } from 'lucide-react';
+import { 
+  Routes, 
+  Route, 
+  NavLink, 
+  Navigate, 
+  useNavigate, 
+  useLocation ,
+  BrowserRouter
+} from "react-router-dom";
+
 
 function App() {
+
+  return(
+        <BrowserRouter basename="/GameX">
+
+
+     <Routes  >
+          <Route path="/" element={<MyApp />} />
+        </Routes>
+
+        </BrowserRouter>
+
+  );
+  
+}
+
+
+function MyApp() {
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-pink-900">
       
@@ -91,7 +118,7 @@ function App() {
       </div>
 
       {/* Custom Styles for Animations */}
-      <style jsx>{`
+      <style >{`
         @keyframes gradient-x {
           0%, 100% { background-size: 200% 200%; background-position: left center; }
           50% { background-size: 200% 200%; background-position: right center; }
@@ -106,4 +133,4 @@ function App() {
   );
 }
 
-export default App;
+export default MyApp;
